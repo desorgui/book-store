@@ -15,7 +15,7 @@ const addBook = (book) => ({
   payload: book,
 });
 const removeBook = (id) => ({
-  type: removeBook,
+  type: REMOVE_BOOK,
   payload: id,
 });
 

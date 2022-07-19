@@ -11,7 +11,7 @@ const categoriesReducer = (state = [], action) => {
   }
 };
 
-export const checkStatus = (id) => ({
+export const checkStatus = () => ({
     type: CHECK_STATUS,
   });
 

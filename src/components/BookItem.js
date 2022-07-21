@@ -1,6 +1,12 @@
-function BookItem() {
+function BookItem({ id, title, author, }) {
   return (
-    <li className="singleBook" />
+      <li><ul>
+        <li key={id}>
+          {title}
+        </li>
+        <li> {author}</li>
+      </ul>
+      </li>
   );
 }
 

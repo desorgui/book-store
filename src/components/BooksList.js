@@ -18,7 +18,7 @@ const BooksList = () => {
               Delete
             </button>
           </div>
-        ),)}
+        ))}
       </ul>
     </div>
   );

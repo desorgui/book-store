@@ -10,8 +10,9 @@ const BooksList = () => {
     <div>
       <h1>List of book</h1>
       <ul className="BookList">
-        {books.map((bookItem) => (
+        {books.map((bookItem) => ( 
           <div key={bookItem.id}>
+            {/* eslint-disable react/jsx-props-no-spreading */}
             <BookItem key={bookItem.id} {...bookItem} />
             <button type="button" key={bookItem.id} onClick={() => dispatch(removeBook(bookItem.id))}>
               Delete
@@ -19,7 +20,6 @@ const BooksList = () => {
           </div>
         )
         )}
-        ;
       </ul>
     </div>
   );

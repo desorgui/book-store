@@ -18,9 +18,9 @@ export default function AddBook() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addBook({
+      id: uuidv4(),
       title: titleInput,
       author: authorInput,
-      id: uuidv4(),
     }));
   };
 

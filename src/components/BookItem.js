@@ -1,13 +1,23 @@
-function BookItem({ id, title, author, }) {
+import PropTypes from 'prop-types';
+
+function BookItem({ id, title, author }) {
   return (
-      <li><ul>
+    <li>
+      <ul>
         <li key={id}>
           {title}
         </li>
-        <li> {author}</li>
+        <li>
+          {author}
+        </li>
       </ul>
-      </li>
+    </li>
   );
 }
 
+BookItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.func.isRequired,
+  author: PropTypes.func.isRequired,
+};
 export default BookItem;

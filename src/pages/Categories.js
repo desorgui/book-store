@@ -6,7 +6,7 @@ const Categories = () => {
   const CHECK_STATUS = 'book-store/categories/CHECK_STATUS';
   return (
     <>
-      <button type="button" onClick={ () => dispatch({type: CHECK_STATUS}) }>
+      <button type="button" onClick={() => dispatch({ type: CHECK_STATUS })}>
         Check Status
       </button>
     </>

@@ -11,14 +11,13 @@ const BooksList = () => {
       <h1>List of book</h1>
       <ul className="BookList">
         {books.map((bookItem) => (
-            <div key={bookItem.id}>
-              <BookItem key={bookItem.id} {...bookItem}/>
-              <button type="button" key={bookItem.id} onClick={() => dispatch(removeBook(bookItem.id))}>
-                Delete
-              </button>
-            </div>
-          )
-        )};
+          <div key={bookItem.id}>
+            <BookItem key={bookItem.id} {...bookItem}/>
+            <button type="button" key={bookItem.id} onClick={() => dispatch(removeBook(bookItem.id))}>
+              Delete
+            </button>
+          </div>
+        ))};
       </ul>
     </div>
   );

@@ -1,0 +1,48 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux/es/exports';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
+
+export default function AddBook() {
+  const dispatch = useDispatch();
+
+  const [titleInput, setBookInput] = useState('');
+  const [authorInput, setAuthorInput] = useState('');
+
+  const handleTitle = (e) => {
+    setBookInput(e.target.value);
+  };
+  const handleAuthor = (e) => {
+    setAuthorInput(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addBook({
+      id: uuidv4(),
+      title: titleInput,
+      author: authorInput,
+    }));
+  };
+
+  return (
+    <form>
+      <input
+        type="text"
+        value={titleInput}
+        className="input-text"
+        placeholder="Title"
+        name="title"
+        onChange={(e) => handleTitle(e)}
+      />
+      <input
+        type="text"
+        value={authorInput}
+        className="input-text"
+        placeholder="Author"
+        name="author"
+        onChange={(e) => handleAuthor(e)}
+      />
+      <button type="button" onClick={handleSubmit}>ADD BOOK</button>
+    </form>
+  );
+}

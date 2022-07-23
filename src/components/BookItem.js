@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 /* eslint-disable camelcase */
 function BookItem({ item_id, title, author }) {
   return (
-    <li>
-      <ul>
-        <li key={item_id}>
+    <li className="bookItem">
+      <ul className="bookItem">
+        <li key={item_id} className="bookTitle">
           {title}
         </li>
-        <li>
+        <li className="bookAuthor">
           {author}
         </li>
       </ul>

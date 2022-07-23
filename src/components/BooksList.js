@@ -16,15 +16,21 @@ const BooksList = () => {
   };
 
   return (
-    <div>
-      <h1>List of book</h1>
-      <ul className="BookList">
+    <div className="bookListContainer">
+      <ul className="bookList">
         {books && books.map((bookItem) => (
 
-          <div key={uuidv4()}>
+          <div key={uuidv4()} className="book">
             {/* eslint-disable react/jsx-props-no-spreading */}
             <BookItem key={uuidv4()} {...bookItem} />
-            <button type="button" key={uuidv4()} onClick={() => removeBookwithId(bookItem.item_id)}>
+            <div className="progress">
+              <div className="oval">
+                <div className="box" />
+              </div>
+              <span>100%</span>
+            </div>
+
+            <button className="bookBigButton" type="button" key={uuidv4()} onClick={() => removeBookwithId(bookItem.item_id)}>
               Delete
             </button>
           </div>

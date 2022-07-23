@@ -1,39 +1,142 @@
-.App {
-  text-align: center;
+body {
+  background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar {
+  display: flex;
+  height: 5rem;
+  padding: 0 7%;
+  align-items: center;
+  background-color: #fff;
+}
+
+.navBar ul {
+  display: flex;
+}
+
+.navBar ul li {
+  margin-left: 30px;
+}
+
+.navBar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navBar h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #0290ff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bookListContainer {
+  margin-top: 2rem;
+  padding: 0 7%;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  min-height: 80px;
+  background-color: #fff;
+  padding: 1.5rem 1.5rem;
+}
+
+.bookItem {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.bookTitle {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.bookAuthor {
+  color: #4386bf;
+}
+
+.addBookForm {
+  margin: 0 7%;
+  margin-top: 50px;
+  border-top: solid 1px #e8e8e8;
+  margin-bottom: 100px;
+}
+
+.addBookForm h2 {
+  color: #888;
+  text-transform: uppercase;
+}
+
+.addBookForm form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.buttonAdd {
+  color: #fff;
+  background-color: #0290ff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 7px 15px;
+}
+
+.addBookForm input {
+  width: 35%;
+  height: 35px;
+  padding-left: 15px;
+  border: solid 1px #e8e8e8;
+  outline: none;
+}
+
+.bookBigButton {
+  max-height: 40px;
+  width: 80px;
+  background-color: #0290ff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 12px 15px;
+}
+
+.oval {
+  background: linear-gradient(to left, #307bbe 0%, #379cf6 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 1000px;
+  padding: 5px;
+}
+
+.box {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 1000px;
+}
+
+.progress {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.progress span {
+  font-size: 1.5em;
+  font-weight: 500;
 }

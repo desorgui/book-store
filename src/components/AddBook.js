@@ -40,24 +40,27 @@ export default function AddBook() {
   };
 
   return (
-    <form>
-      <input
-        type="text"
-        value={book.title || ''}
-        className="input-text"
-        placeholder="Title"
-        name="title"
-        onChange={handleInputChange}
-      />
-      <input
-        type="text"
-        value={book.author || ''}
-        className="input-text"
-        placeholder="Author"
-        name="author"
-        onChange={handleInputChange}
-      />
-      <button type="button" onClick={saveBook}>ADD BOOK</button>
-    </form>
+    <div className="addBookForm">
+      <h2>Add New Book</h2>
+      <form>
+        <input
+          type="text"
+          value={book.title || ''}
+          className="input-text"
+          placeholder="Title"
+          name="title"
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          value={book.author || ''}
+          className="input-text"
+          placeholder="Author"
+          name="author"
+          onChange={handleInputChange}
+        />
+        <button type="button" className="buttonAdd" onClick={saveBook}>ADD BOOK</button>
+      </form>
+    </div>
   );
 }

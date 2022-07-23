@@ -12,13 +12,7 @@ const BooksList = () => {
   }, []);
 
   const removeBookwithId = (id) => {
-    dispatch(deleteBook(id))
-      .then(() => {
-        console.log('success');
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    dispatch(deleteBook(id));
   };
 
   return (

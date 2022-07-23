@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 
-function BookItem({ id, title, author }) {
+/* eslint-disable camelcase */
+function BookItem({ item_id, title, author }) {
   return (
     <li>
       <ul>
-        <li key={id}>
+        <li key={item_id}>
           {title}
         </li>
         <li>
@@ -16,7 +17,7 @@ function BookItem({ id, title, author }) {
 }
 
 BookItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  item_id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };

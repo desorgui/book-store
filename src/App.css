@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 body {
   background-color: #fafafa;
   text-transform: capitalize;
@@ -68,7 +69,7 @@ ul {
   font-size: 1.7em;
   font-weight: bold;
   margin-bottom: 5px;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
 }
 
 .bookAuthor {
@@ -193,7 +194,7 @@ ul {
   padding: 0 20px;
 }
 
-.book-action li:first-child{
+.book-action li:first-child {
   padding-left: 0;
 }
 
@@ -217,7 +218,7 @@ ul {
 
 .progress-title {
   text-transform: uppercase;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   opacity: 0.5;
   color: #121212;
   margin-bottom: 7px;

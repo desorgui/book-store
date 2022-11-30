@@ -36,9 +36,6 @@ export default function AddBook() {
         swal(data, 'You create a new book!', 'success', {
           button: 'Aww yiss!',
         });
-      })
-      .catch((e) => {
-        console.log(e);
       });
   };
 
@@ -54,13 +51,6 @@ export default function AddBook() {
           name="title"
           onChange={handleInputChange}
         />
-        <select id="cars" name="cars" className="input-text">
-          <option value={null}>Select</option>
-          <option value={book.author || ''}>Volvo</option>
-          <option value={book.author || ''}>Saab</option>
-          <option value={book.author || ''}>Fiat</option>
-          <option value={book.author || ''}>Audi</option>
-        </select>
         <input
           type="text"
           value={book.author || ''}

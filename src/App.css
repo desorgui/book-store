@@ -1,5 +1,7 @@
+/* stylelint-disable no-descending-specificity */
 body {
   background-color: #fafafa;
+  text-transform: capitalize;
 }
 
 li {
@@ -64,8 +66,10 @@ ul {
 }
 
 .bookTitle {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: RobotoSlab, sans-serif;
 }
 
 .bookAuthor {
@@ -99,7 +103,7 @@ ul {
   padding: 7px 15px;
 }
 
-.addBookForm input {
+.addBookForm .input-text {
   width: 35%;
   height: 35px;
   padding-left: 15px;
@@ -109,12 +113,12 @@ ul {
 
 .bookBigButton {
   max-height: 40px;
-  width: 80px;
   background-color: #0290ff;
   border: none;
   outline: none;
   border-radius: 5px;
   color: #fff;
+  margin-top: 20px;
   padding: 12px 15px;
 }
 
@@ -141,4 +145,102 @@ ul {
 .progress span {
   font-size: 1.5em;
   font-weight: 500;
+}
+
+/* progress */
+
+.progressbar {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  margin: 1em;
+  transform: rotate(-90deg);
+}
+
+.progressbar__svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.progressbar__svg-circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 6;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke: #379cf6;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+.shadow-scss {
+  filter: drop-shadow(0 0 2px #f3f);
+}
+
+.book-category {
+  font-weight: 500;
+  opacity: 0.5;
+  color: #121212;
+}
+
+.book-action {
+  display: flex;
+  margin-top: 20px;
+}
+
+.book-action li {
+  padding: 0 20px;
+}
+
+.book-action li:first-child {
+  padding-left: 0;
+}
+
+.book-action li:not(:first-child) {
+  border-left: solid 2px #e8e8e8;
+}
+
+.book-action li input {
+  color: #4386bf;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.book-progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-title {
+  text-transform: uppercase;
+  font-family: RobotoSlab, sans-serif;
+  opacity: 0.5;
+  color: #121212;
+  margin-bottom: 7px;
+}
+
+.circle-scss {
+  animation: anim_circle-scss 1s ease-in-out forwards;
+}
+
+.progressbar__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0.25em 0.5em;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.25em;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@keyframes anim_circle-scss {
+  to {
+    stroke-dashoffset: 300;
+  }
 }

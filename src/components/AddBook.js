@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux/es/exports';
 import { v4 as uuidv4 } from 'uuid';
+import swal from 'sweetalert';
 // import { addBook } from '../redux/books/books';
 import { createBook } from '../redux/actions/books';
 
@@ -32,10 +33,9 @@ export default function AddBook() {
           author,
           category: 'under construction',
         });
-        console.log(data);
-      })
-      .catch((e) => {
-        console.log(e);
+        swal(data, 'You create a new book!', 'success', {
+          button: 'Aww yiss!',
+        });
       });
   };
 
@@ -54,7 +54,7 @@ export default function AddBook() {
         <input
           type="text"
           value={book.author || ''}
-          className="input-text"
+          className="input-tezxt"
           placeholder="Author"
           name="author"
           onChange={handleInputChange}

@@ -13,6 +13,7 @@ export const createBook = (item_id, title, author, category) => async (dispatch)
         item_id, title, author, category,
       }),
     });
+    console.log(Promise.resolve(res.data));
     return Promise.resolve(res.data);
   } catch (err) {
     return Promise.reject(err);
